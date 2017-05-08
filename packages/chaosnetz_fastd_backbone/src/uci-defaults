@@ -1,0 +1,7 @@
+#!/bin/sh
+# uci -m import fastd < /lib/chaosnetz/fastd_backbone/fastd.uci 
+# uci -m import network < /lib/chaosnetz/fastd_backbone/network.uci
+# uci -m import firewall < /lib/chaosnetz/fastd_backbone/firewall.uci
+# uci commit
+# /etc/init.d/network restart
+

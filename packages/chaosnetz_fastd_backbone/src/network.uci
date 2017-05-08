@@ -1,0 +1,8 @@
+package network
+
+config interface 'fastd-bb' 
+  option ifname 'tap-bb'
+  option proto 'dhcp'
+
+
+

@@ -1,0 +1,17 @@
+config zone 'bb'
+  option forward 'ACCEPT'
+  option output 'ACCEPT'
+  option input 'ACCEPT'
+  option name 'bb'
+  list network 'fastd-bb'
+  option mtu_fix '1'
+
+config forwarding 'lan_to_bb'
+  option src 'lan'
+  option dest 'bb'
+
+config forwarding 'bb_to_lan'
+  option src 'bb'
+  option dest 'lan'
+
+  

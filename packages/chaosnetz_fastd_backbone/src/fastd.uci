@@ -1,0 +1,20 @@
+package fastd
+
+config peer 'icvpn1'
+	option remote 'ipv4 "icvpn1.chaosnetz.org" port 11003'
+	option enabled '1'
+	option net 'backbone'
+	option key '26e72d1eadc61fbce48d6aa5363b9f31df3d024d162e122fec7b3f1ba3a234ad'
+
+# Das Backbone-Netz (hier fuer das ICVPN) ist per default verschluesselt
+config fastd 'backbone'
+	option enabled '1'
+	option syslog_level 'warn'
+	option mode 'tap'
+	option interface 'tap-bb'
+	option mtu '1426'
+	option forward '0'
+	option secure_handshakes '1'
+	list method 'salsa2012+umac'
+	option secret 'generate'
+
